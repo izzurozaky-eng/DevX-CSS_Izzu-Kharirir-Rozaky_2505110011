@@ -1,0 +1,254 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========== HEADER & NAVBAR ========== */
+.header {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+/* Style link utama */
+.nav a {
+  position: relative;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+/* Efek garis bawah animasi */
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #a5d6a7;
+  transition: width 0.4s ease;
+}
+
+/* Hover — muncul smooth underline & warna sedikit cerah */
+.nav a:hover {
+  color: #e8f5e9;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Tambahan efek highlight lembut */
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 70px 10%;
+  background: linear-gradient(to right, #e8f5e9, #dcedc8);
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  color: #1b5e20;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+}
+
+.btn:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+}
+
+.hero img {
+  width: 380px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== CARD SECTION ===== */
+.card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin: 50px auto;
+  padding: 40px 50px;
+  max-width: 950px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: #1b5e20;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ===== LIST (HOW IT WORKS) ===== */
+ul {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 8px 0;
+  border-left: 4px solid #66bb6a;
+  padding-left: 10px;
+}
+
+ul li strong {
+  color: #2e7d32;
+}
+
+/* ===== DONATE SECTION ===== */
+.donate {
+  background: linear-gradient(to bottom right, #c8e6c9, #f1f8e9);
+  text-align: center;
+}
+
+.donate h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.donate p {
+  margin-bottom: 20px;
+}
+
+/* ===== CONTACT SECTION ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #66bb6a;
+  outline: none;
+}
+
+button.btn {
+  align-self: start;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  background-color: #1b5e20;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: 60px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
